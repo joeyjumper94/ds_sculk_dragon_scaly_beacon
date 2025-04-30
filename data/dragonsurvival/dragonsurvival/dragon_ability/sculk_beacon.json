@@ -1,0 +1,244 @@
+{
+  "usage_blocked": {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "minecraft:nether_star"
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "offhand": {
+                "items": "minecraft:nether_star"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "target_selection": {
+        "target_type": "dragonsurvival:area",
+        "applied_effects": {
+          "entity_effect": [
+            {
+              "effect_type": "dragonsurvival:potion",
+              "potion": {
+                "effects": "minecraft:speed",
+                "amplifier": {
+                  "type": "minecraft:lookup",
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "fallback": 1
+                },
+                "duration": 300,
+                "probability": {
+                  "type": "minecraft:lookup",
+                  "values": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "fallback": 1
+                },
+                "effect_particles": false,
+                "show_icon": true
+              }
+            },
+            {
+              "effect_type": "dragonsurvival:potion",
+              "potion": {
+                "effects": "minecraft:haste",
+                "amplifier": {
+                  "type": "minecraft:lookup",
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "fallback": 1
+                },
+                "duration": 300,
+                "probability": {
+                  "type": "minecraft:lookup",
+                  "values": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "fallback": 1
+                },
+                "effect_particles": false,
+                "show_icon": true
+              }
+            },
+            {
+              "effect_type": "dragonsurvival:potion",
+              "potion": {
+                "effects": "minecraft:resistance",
+                "amplifier": {
+                  "type": "minecraft:lookup",
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "fallback": 1
+                },
+                "duration": 300,
+                "probability": {
+                  "type": "minecraft:lookup",
+                  "values": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "fallback": 1
+                },
+                "effect_particles": false,
+                "show_icon": true
+              }
+            },
+            {
+              "effect_type": "dragonsurvival:potion",
+              "potion": {
+                "effects": "minecraft:jump_boost",
+                "amplifier": {
+                  "type": "minecraft:lookup",
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "fallback": 1
+                },
+                "duration": 300,
+                "probability": {
+                  "type": "minecraft:lookup",
+                  "values": [
+                    0,
+                    1,
+                    1,
+                    1
+                  ],
+                  "fallback": 1
+                },
+                "effect_particles": false,
+                "show_icon": true
+              }
+            },
+            {
+              "effect_type": "dragonsurvival:potion",
+              "potion": {
+                "effects": "minecraft:strength",
+                "amplifier": {
+                  "type": "minecraft:lookup",
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "fallback": 1
+                },
+                "duration": 300,
+                "probability": {
+                  "type": "minecraft:lookup",
+                  "values": [
+                    0,
+                    0,
+                    1,
+                    1
+                  ],
+                  "fallback": 1
+                },
+                "effect_particles": false,
+                "show_icon": true
+              }
+            }
+          ],
+          "target_conditions": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player"
+              }
+            }
+          },
+          "targeting_mode": "all"
+        },
+        "radius": {
+          "type": "minecraft:linear",
+          "base": 10,
+          "per_level_above_first": 2
+        }
+      },
+      "trigger_rate": 0
+    }
+  ],
+  "activation": {
+    "activation_type": "dragonsurvival:passive",
+    "trigger": {
+      "trigger_type": "dragonsurvival:constant"
+    }
+  },
+  "can_be_manually_disabled": true,
+  "icon": {
+    "texture_entries": [
+      {
+        "from_level": 0,
+        "texture_resource": "dragonsurvival:abilities/forest/inspiration_0"
+      },
+      {
+        "from_level": 1,
+        "texture_resource": "dragonsurvival:abilities/unclaimed/ice_drop_1"
+      },
+      {
+        "from_level": 2,
+        "texture_resource": "dragonsurvival:abilities/unclaimed/ice_drop_2"
+      },
+      {
+        "from_level": 3,
+        "texture_resource": "dragonsurvival:abilities/unclaimed/ice_drop_3"
+      },
+      {
+        "from_level": 4,
+        "texture_resource": "dragonsurvival:abilities/unclaimed/ice_drop_4"
+      }
+    ]
+  },
+  "upgrade": {
+    "maximum_level": 4,
+    "upgrade_type": "dragonsurvival:experience_points",
+    "experience_cost": {
+      "type": "minecraft:linear",
+      "base": 100,
+      "per_level_above_first": 100
+    }
+  }
+}

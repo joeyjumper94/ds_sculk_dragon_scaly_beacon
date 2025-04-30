@@ -1,0 +1,10 @@
+{
+  "replace":false,
+  "values": [
+		{
+			"comment":"",
+			"required":false,
+			"id":"dragonsurvival:sculk_beacon"
+    }
+  ]
+}
