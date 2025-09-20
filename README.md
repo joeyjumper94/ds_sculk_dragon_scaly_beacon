@@ -1,10 +1,16 @@
 # ds_sculk_dragon_scaly_beacon
  sculk themed DS addon
+ 
  Sculk Dragons can hold a Nether Star in their main hand or offhand to provide all effects of a beacon that has a tier corresponding to the level except regeneration.
+ 
  at level 1, speed 1 and haste 1
+ 
  at level 2, speed 1, haste 1, resistance 1, and jump boost 1
+ 
  at level 3, speed 1, haste 1, resistance 1, jump boost 1, and strength 1
+ 
  at level 4, speed 2, haste 2, resistance 2, jump boost 2, and strength 2
+ 
 
 # required mods
  Dragon survival:
